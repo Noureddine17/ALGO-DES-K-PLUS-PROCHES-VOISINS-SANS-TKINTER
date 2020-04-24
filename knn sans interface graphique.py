@@ -1,5 +1,5 @@
 """ Presentation Du Projet : Simulation de réfrigérateur a l'aide d'un algorithme style 'k plus proches voisins'//
-Cette algo a pour but de comparer les réfrigérateurs d'une population par rapport a la votre, votre frigo etant la liste nommé: témoin[]// Pour afficher les réfrigérateurs qui sont comparés au votre pressez f5 puis appelez la liste prsn[], ces réfrigérateurs seront numérotés selon le nombre de 'gens' que vous avez choisi a la ligne 88 dans la fonction gens(x)
+Cette algo a pour but de comparer les réfrigérateurs d'une population par rapport a la votre, votre frigo etant la liste nommé: témoin[]// Pour afficher les réfrigérateurs qui sont comparés au votre pressez f5 puis appelez la liste prsn[], ces réfrigérateurs seront numérotés selon le nombre de 'gens' que vous avez choisi a la ligne 88 dans la fonction gens(x)et en deuxieme arguments de la ligne 258 le nombre de k voisins voulu
 """
 import random
 from tkinter import *
@@ -84,8 +84,9 @@ def voisin(vide,K):
         beto = beto + str(q) + ','
     print("les "+ " " + str(K)+" "+" plus proches voisins sont les numeros " + beto)
 
-""" changez la valeur de l'argument de la fonction gens() pour avoir le nombre de frigo que l'on allons comparer aux votres """
-gens(10)
+""" changez la valeur de l'argument de la fonction gens() pour avoir le nombre de frigo que l'on allons comparer aux votres et le deuxieme argument de voisin() pour avoir les k plus proches voisins voulu"""
+gens(85)
 vide = knn(temoin)
+voisin(vide,3)
 sss = autre(prsn,vide)
 vide.extend(sss)
